@@ -6,13 +6,13 @@
                 <!-- find ball-->
                 <Fallback name="find_ball_callback">
                     <BallFound name="ball_found"/>
-                    <FindBall name="find_ball"/>
+                    <FindBall name="find_ball" ball_location="{location}"/>
                 </Fallback>
 
                 <!-- approach ball-->
                 <Fallback name="approach_ball_fallback">
-                    <BallClose name="ball_close"/>
-                    <ApproachBall name="approach_ball"/>
+                    <BallClose name="ball_close" ball_location="{location}"/>
+                    <ApproachBall name="approach_ball" ball_location="{location}"/>
                 </Fallback>
 
                 <!-- ball grasp-->
