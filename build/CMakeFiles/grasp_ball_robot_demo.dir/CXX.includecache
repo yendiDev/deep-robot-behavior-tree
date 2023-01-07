@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/clinton/Documents/bt_demo/grasp_ball_robot_demo/bt_demo.cpp
+iostream
+-
+chrono
+-
+vector
+-
+behaviortree_cpp_v3/action_node.h
+/home/clinton/Documents/bt_demo/grasp_ball_robot_demo/behaviortree_cpp_v3/action_node.h
+behaviortree_cpp_v3/bt_factory.h
+/home/clinton/Documents/bt_demo/grasp_ball_robot_demo/behaviortree_cpp_v3/bt_factory.h
+
