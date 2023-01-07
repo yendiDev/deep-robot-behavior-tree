@@ -1,0 +1,43 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Fallback name="root_fallback">
+            <!-- Robot Functions-->
+            <Sequence name="robot_function">
+                <!-- find ball-->
+                <Fallback name="find_ball_callback">
+                    <BallFound name="ball_found"/>
+                    <FindBall name="find_ball"/>
+                </Fallback>
+
+                <!-- approach ball-->
+                <Fallback name="approach_ball_fallback">
+                    <BallClose name="ball_close"/>
+                    <ApproachBall name="approach_ball"/>
+                </Fallback>
+
+                <!-- ball grasp-->
+                <Fallback name="ball_grasp_fallback">
+                    <BallGrasped name="ball_grasped"/>
+                    <GraspBall name="grasp_ball"/>
+                </Fallback>
+
+                <!-- bin close-->
+                <Fallback name="bin_close_fallback">
+                    <BinClose name="bin_close"/>
+                    <ApproachBin name="approach_bin"/>
+                </Fallback>
+
+                <!-- ball placed-->
+                <Fallback name="ball_placed">
+                    <BallPlaced name="ball_placed"/>
+                    <PlaceBall name="place_ball"/>
+                </Fallback>
+
+            </Sequence>
+
+            <!-- fallback-->
+            <AskForHelp name="ask_for_help"/>
+
+        </Fallback>
+    </BehaviorTree>
+</root>
